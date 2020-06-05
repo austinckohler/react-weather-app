@@ -1,4 +1,4 @@
 module.exports = {
-  key: "{4dbfca3e57a3ebfd91aec595eab2ecf9}",
+  key: "4dbfca3e57a3ebfd91aec595eab2ecf9",
   base: "https://api.openweathermap.org/data/2.5/",
 };
