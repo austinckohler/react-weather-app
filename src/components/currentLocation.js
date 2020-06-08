@@ -1,12 +1,10 @@
 import React from "react";
 import Forcast from "./Forcast";
 
-function currentLocation({ weatherInfo }) {
-  // console.log(weatherInfo);
+function currentLocation(props) {
+  console.log(props.weather);
 
-  // ((weather) => (
-  //   <Forcast key={weather.id} {...weather} />
-  // ));
+  // (weather) => <Forcast key={weather.id} {...weather} />;
 
   return (
     <div>

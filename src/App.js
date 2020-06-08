@@ -45,15 +45,7 @@ const defaults = {
 
 export class App extends Component {
   state = {
-    coord: [],
-    temperatureF: [],
-    city: [],
-    country: [],
-    humidity: [],
-    description: [],
-    icon: "CLEAR_DAY",
-    temperatureHigh: [],
-    temperatureLow: [],
+    weather: {},
   };
 
   componentDidMount() {
@@ -68,7 +60,7 @@ export class App extends Component {
     return (
       <React.Fragment>
         <div className="container">
-          <CurrentLocation coordinates={this.state.coord} />
+          <CurrentLocation weather={this.state} />
         </div>
       </React.Fragment>
     );
