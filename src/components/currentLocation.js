@@ -1,15 +1,23 @@
 import React from "react";
 import Forcast from "./Forcast";
 
-function currentLocation(props) {
-  console.log(props.weather);
+function currentLocation({ weather }) {
+  const weatherInfo = Object.values(weather);
+  console.log(weather);
 
-  // (weather) => <Forcast key={weather.id} {...weather} />;
+  const showWeather = weatherInfo.map((weather) => (
+    <Forcast
+      key={weather.id}
+      lon={weather.lon}
+      lat={weather.lat}
+      temp={weather.temp}
+    />
+  ));
 
   return (
     <div>
       <h2>test</h2>
-      {/* <ul>{showWeather}</ul> */}
+      <ul>{showWeather}</ul>
     </div>
   );
 }

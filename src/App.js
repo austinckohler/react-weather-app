@@ -45,7 +45,7 @@ const defaults = {
 
 export class App extends Component {
   state = {
-    weather: {},
+    weather: [],
   };
 
   componentDidMount() {
@@ -53,7 +53,9 @@ export class App extends Component {
       `${apiKeys.base}weather?lat=${apiKeys.lat}&lon=${apiKeys.lon}&units=Imperial&APPID=${apiKeys.key}`
     )
       .then((response) => response.json())
-      .then((weather) => this.setState(Object.values(weather)));
+      .then((weather) =>
+        this.setState({ weather: weather.coord, weather: weather.main })
+      );
   }
 
   render() {
